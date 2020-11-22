@@ -1,0 +1,22 @@
+{
+  "name": "make-payment-system",
+  "version": "1.0.0",
+  "description": "Make payment and receive money on your app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node -r esm backend/server.js",
+    "server": "nodemon -r esm backend/server.js"
+  },
+  "author": "Emmanuel Tweneboah",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
