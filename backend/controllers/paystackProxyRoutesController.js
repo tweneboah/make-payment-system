@@ -1,14 +1,6 @@
-# make-payment-system
+import expressAsyncHandler from 'express-async-handler';
+import axios from 'axios';
 
-Integration of payment system using paystack into MERN application. This integration helps you to receive payment on your site across the globe
-
-# Integration steps:
-
-## 1. Create Proxy routes for both get and Post Request to paystack
-
-### POST REQUEST HANDLER
-
-```js
 const paystackPostRequestProxyController = expressAsyncHandler(
   async (req, res) => {
     try {
@@ -24,11 +16,7 @@ const paystackPostRequestProxyController = expressAsyncHandler(
     }
   }
 );
-```
 
-### POST REQUEST HANDLER
-
-```js
 //PAYSTACK GET REQUEST HANDLER
 const paystackGetRequestProxyController = expressAsyncHandler(
   async (req, res) => {
@@ -45,4 +33,8 @@ const paystackGetRequestProxyController = expressAsyncHandler(
     }
   }
 );
-```
+
+export {
+  paystackPostRequestProxyController,
+  paystackGetRequestProxyController,
+};
